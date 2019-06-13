@@ -1,7 +1,8 @@
 const express     = require("express"),
     app         = express(),
     methodOverride = require("method-override"),
-   { check, validationResult } = require('express-validator/check');
+   { check, validationResult } = require('express-validator/check'), 
+   slider = require('nouislider');
 
 
 app.use(express.static(__dirname + "/public"));
@@ -59,7 +60,13 @@ app.post('/apply', [
 
 });
 
-
+app.get('/api',(req,res) =>{
+   const data = {
+       name:'john',
+       age:'23'
+   }
+   res.send(data)
+});
 
 
 const port = process.env.PORT || 5000;
@@ -69,7 +76,5 @@ app.listen(port, console.log(`server started on port ${port}`))
 // app.listen(process.env.PORT, process.env.IP, function(){
 //    console.log("Server Started");
 // });
-
-
 
 

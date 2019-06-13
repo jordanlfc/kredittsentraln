@@ -1,7 +1,7 @@
 const request = require("request");
 
 
-request('http://www.talentjaeger.eu', function(error, response, body){
+request('http://localhost:5000/api', function(error, response, body){
     if(error){
         console.log(error)
     } else {
@@ -11,3 +11,5 @@ request('http://www.talentjaeger.eu', function(error, response, body){
         }
     }
 });
+
+
