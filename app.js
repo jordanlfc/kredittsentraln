@@ -17,6 +17,7 @@ app.use(express.json())
 app.set("view engine", "ejs");
 
 app.get('/', (req,res) => res.render('index'));
+app.get('/2', (req,res) => res.render('index1'));
 
 app.get('/apply', (req,res) => res.render('form'));
 
@@ -25,15 +26,12 @@ app.post('/apply', [
    check('mobile').isInt().not().isEmpty(),
    check('social-security-number').isInt().not().isEmpty(),
    check('employment-type').not().isEmpty(),
-   check('employmment-since').not().isEmpty(),
    check('employer-name').not().isEmpty(),
    check('education').not().isEmpty(),
    check('country').not().isEmpty(),
    check('years-in-norway').not().isEmpty(),
    check('income').isInt().not().isEmpty(),
    check('civil-status').not().isEmpty(),
-   check('linving-status').not().isEmpty(),
-   check('address-since').not().isEmpty(),
    check('children').not().isEmpty(),
    check('spouse-income').not().isEmpty(),
    check('rent').isInt().not().isEmpty(),

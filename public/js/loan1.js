@@ -54,25 +54,37 @@ range.noUiSlider.on('update', function (values, handle) {
 
 // ------------------------------------ amount slider
 
-var amountSlider = document.getElementById('amount-range');
+var html5Slider = document.getElementById('amount-range');
 
-noUiSlider.create(amountSlider, {
+noUiSlider.create(html5Slider, {
     start: [30000],
+    connect: [true,false],
     range: {
-        'min': [10000],
-        'max': [500000]
+        'min': 20000,
+        'max': 500000
     },
-    connect: true,
-    direction: 'ltr',
-    behaviour: 'hover',
-    orientation: 'horizontal'
+    step: 1000,
 });
 
-// var amountSliderValueElement = document.getElementById('amount-range-value');
+var inputNumber = document.querySelector('#txtLoan');
 
-// amountSlider.noUiSlider.on('update', function (values, handle) {
-//     amountSliderValueElement.innerHTML = values[handle];
+html5Slider.noUiSlider.on('update', function (values, handle) {
+
+    var value = values[handle];
+
+    inputNumber.value = parseInt(value)
+    
+});
+
+
+// inputNumber.addEventListener('change', function () {
+//     html5Slider.noUiSlider.set([null, this.value]);
 // });
+
+$( "#txtLoan" ).change(function() {
+    html5Slider.noUiSlider.set([this.value]);
+});
+
 
 
 // amount slider end -------------------
