@@ -39,7 +39,36 @@ $(document).ready(function() {
         }
     });
 
-    
+    $( "#living-status" ).change(function() {
+        if (
+            $( "select#living-status" ).val() == 1 || 
+            $( "select#living-status" ).val() == 3
+        ){
+            $( "#rent" ).prop( "disabled", false );
+            $( "#rent-received" ).prop( "disabled", false );
+            $( "#mortgage" ).prop( "disabled", false );
+        } else if (
+            $( "select#living-status" ).val() == 2
+        ){
+            $( "#rent" ).prop( "disabled", true );
+            $( "#rent-received" ).prop( "disabled", false );
+            $( "#mortgage" ).prop( "disabled", false );
+        } else if (
+            $( "select#living-status" ).val() == 4 ||
+            $( "select#living-status" ).val() == 5
+            
+        ){
+            $( "#rent" ).prop( "disabled", false );
+            $( "#rent-received" ).prop( "disabled", true );
+            $( "#mortgage" ).prop( "disabled", true );
+        } else {
+            $( "#rent" ).prop( "disabled", false );
+            $( "#rent-received" ).prop( "disabled", false );
+            $( "#mortgage" ).prop( "disabled", false );
+        }
+    });
+
+
     
 
 
