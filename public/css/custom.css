@@ -12,10 +12,13 @@
 .bar-box input {
     height: 50%;
     width: 25%;
-    margin-left: auto;
     border:none;
     border-radius: 10px;
     text-align: center;
+    background:none;
+    color: #728186;
+    font-weight: bold;
+    margin-top:0.4em;
 
 }
 .bar-box p {
@@ -48,7 +51,7 @@
 
 .calc-container {
     text-align:left;
-    max-width: 1200px;
+    max-width: 450px;
     min-width: 400px;
     margin:1em;
     box-sizing: border-box;
@@ -74,8 +77,12 @@
 .contact-box{
     display: grid;
     width: 70%;
-    margin: 2em auto;
-    
+    margin: 1.2em auto;
+}
+.coms-box{
+    width: 70%;
+    margin: 1.2em auto;
+    font-size: 0.7em !important;
 }
 
 .contact-border {
@@ -148,7 +155,7 @@
 }
 
 .payment-box {
-    margin: 4em auto;
+    margin: 2em auto;
     width: 50%;
     text-align: center;
     padding: .5em;
@@ -168,6 +175,7 @@
 .slider-value{ 
     margin-left: 8.5em
 }
+
 
 .switch-box{
     margin:auto;
@@ -205,127 +213,3 @@
     width: 80% !important;   
 }
 
-/* ______________________________________ switch ________________________________________ */
-
-.onoffswitch {
-    position: relative; width: 60px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin: auto;
-}
-.onoffswitch-checkbox {
-    display: none;
-}
-.onoffswitch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #E3E3E3; border-radius: 36px;
-}
-.onoffswitch-inner {
-    display: block; width: 200%; margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-}
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 36px; padding: 0; line-height: 36px;
-    font-size: 16px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-    box-sizing: border-box;
-}
-.onoffswitch-inner:before {
-    content: "";
-    padding-left: 10px;
-    background-color: #FFFFFF; color: #FFFFFF;
-}
-.onoffswitch-inner:after {
-    content: "";
-    padding-right: 10px;
-    background-color: #FFFFFF; color: #666666;
-    text-align: right;
-}
-.onoffswitch-switch {
-    display: block; width: 36px; margin: 0px;
-    background: #A1A1A1;
-    position: absolute; top: 0; bottom: 0;
-    right: 20px;
-    border: 2px solid #E3E3E3; border-radius: 36px;
-    transition: all 0.3s ease-in 0s; 
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-    margin-left: 0;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px; 
-    background-color: #27A1CA; 
-}
-
-
-/* ____________________________________ checkbox ____________________________________ */
-
-input:active, input:focus {
-    /* Remove that really annoying blue border
-    that you only see when you don't want to */
-    outline:none;
-  }
-  
-  input[type="checkbox"] {
-    font-weight:bold;
-    padding:2em 10px;
-    width:12em;;
-    background: #B6E2CA;
-    color:#063E5D;
-    -webkit-appearance:none;
-    position:relative;
-    font-size: .6em;
-    width: 19em;
-  }
-  
-  input[type="checkbox"]:after {
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    content: "No";
-    position:absolute;
-    height:100%;
-    line-height:calc(3em + 6px);
-    padding:3px 1em;
-    background: #D7EAF1; ;
-    text-align:center;
-    right:10px;
-    top:-3px;
-    width:40%;
-    box-shadow:rgba(0,0,0,.5) 0 0 3px;
-  }
-  
-  input[type="checkbox"]:checked:after {
-    content: "Yes";
-    right:calc(60% - 10px - 2em);
-  }
-  
-  input[type="checkbox"]:before {
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    line-height:calc(3em + 6px);
-    content: "Yes";
-    position:absolute;
-    height:100%;
-    top:0;
-    right:calc(60% - 10px);
-    width:40%;
-    text-align:center;
-  }
-  
-  input[type="checkbox"]:checked:before {
-    content: "No";
-    right:10px;
-  }
-  
-  input[type="checkbox"].inactive:after {
-    background:#b6b6b7;
-  }
-  
-  input[type='checkbox'].ownline {
-    width:100%;
-    display:block;
-  }

@@ -16,8 +16,7 @@ app.use(express.json())
 
 app.set("view engine", "ejs");
 
-app.get('/', (req,res) => res.render('index'));
-app.get('/2', (req,res) => res.render('index1'));
+app.get('/', (req,res) => res.render('index1'));
 
 app.get('/apply', (req,res) => res.render('form'));
 

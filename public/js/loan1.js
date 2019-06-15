@@ -1,3 +1,4 @@
+
 //initial variables
 var loanYear = 1;
 var stepYear = 1;
@@ -38,12 +39,11 @@ noUiSlider.create(range, {
         'max': maxLoanYear
     },
     step: stepYear,
-    start: [loanYear],
-    margin: 300,
-
+    start: [1],
     direction: 'ltr',
     behaviour: 'hover',
-    orientation: 'horizontal'
+    orientation: 'horizontal',
+    connect: [true,false]
 });
 
 var rangeSliderValueElement = document.getElementById('slider-range-value');
@@ -57,13 +57,13 @@ range.noUiSlider.on('update', function (values, handle) {
 var html5Slider = document.getElementById('amount-range');
 
 noUiSlider.create(html5Slider, {
-    start: [30000],
+    start: [10000],
     connect: [true,false],
     range: {
-        'min': 20000,
+        'min': 10000,
         'max': 500000
     },
-    step: 1000,
+    step: 500,
 });
 
 var inputNumber = document.querySelector('#txtLoan');
@@ -77,10 +77,6 @@ html5Slider.noUiSlider.on('update', function (values, handle) {
 });
 
 
-// inputNumber.addEventListener('change', function () {
-//     html5Slider.noUiSlider.set([null, this.value]);
-// });
-
 $( "#txtLoan" ).change(function() {
     html5Slider.noUiSlider.set([this.value]);
 });
@@ -90,8 +86,13 @@ $( "#txtLoan" ).change(function() {
 // amount slider end -------------------
 
 //Add the change event to redraw the graph and calculate loan
+
 range.noUiSlider.on("change", function (value) {
     loanYear = parseInt(value[0]);
+    calculateLoan();
+});
+
+html5Slider.noUiSlider.on("change", function (value) {
     calculateLoan();
 });
 

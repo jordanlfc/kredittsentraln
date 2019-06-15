@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/switch.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -68,9 +69,7 @@
         <div class="bar-box mt-3 d-flex">
           <p class="mt-1">Loan Amount</p>
           <div class="currency-code" style="margin-right:2px"></div>
-          <!-- <input type="text" id="txtLoan" value="300000" min="10000" max="500000"
-            class="txt-loan-input" /> -->
-          <input type="number" id="txtLoan" />
+          <input type="number" id="txtLoan" class="slider-value" />
         </div>
         <div class="bar-box">
           <div id="amount-range" class=""></div>
@@ -114,6 +113,18 @@
               style=" border-bottom-left-radius: 10px;  border-bottom-right-radius: 10px">
           </div>
         </div>
+        <div class="coms-box">
+          <input type="checkbox" name="News" value="yes">Jeg samtykker til at Axo Finans AS kan
+          behandle mine/våre personopplysninger som beskrevet her.<br>
+          <input type="checkbox" name="coms" value="yes">Jeg samtykker til at Axo Finans AS kan sende
+          meg nyhetsbrev på e-post/SMS.<br>
+        </div>
+
+
+
+
+
+
         <div class="button-box">
           <button type="submit" class="btn btn-lg">Search Now</button>
         </div>

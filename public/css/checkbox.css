@@ -1,0 +1,73 @@
+/* ____________________________________ checkbox ____________________________________ */
+
+input:active, input:focus {
+    /* Remove that really annoying blue border
+    that you only see when you don't want to */
+    outline:none;
+  }
+  
+  input[type="checkbox"] {
+    font-weight:bold;
+    padding:2em 10px;
+    width:12em;;
+    background: #B6E2CA;
+    color:#063E5D;
+    -webkit-appearance:none;
+    position:relative;
+    font-size: .6em;
+    width: 19em;
+  }
+  
+  input[type="checkbox"]:after {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    content: "No";
+    position:absolute;
+    height:100%;
+    line-height:calc(3em + 6px);
+    padding:3px 1em;
+    background: #D7EAF1; ;
+    text-align:center;
+    right:10px;
+    top:-3px;
+    width:40%;
+    box-shadow:rgba(0,0,0,.5) 0 0 3px;
+  }
+  
+  input[type="checkbox"]:checked:after {
+    content: "Yes";
+    right:calc(60% - 10px - 2em);
+  }
+  
+  input[type="checkbox"]:before {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    line-height:calc(3em + 6px);
+    content: "Yes";
+    position:absolute;
+    height:100%;
+    top:0;
+    right:calc(60% - 10px);
+    width:40%;
+    text-align:center;
+  }
+  
+  input[type="checkbox"]:checked:before {
+    content: "No";
+    right:10px;
+  }
+  
+  input[type="checkbox"].inactive:after {
+    background:#b6b6b7;
+  }
+  
+  input[type='checkbox'].ownline {
+    width:100%;
+    display:block;
+  }
