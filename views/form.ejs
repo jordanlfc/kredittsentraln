@@ -68,6 +68,8 @@
                         <label for="employment-type">Arbeidsforhold</label>
                     </div>
                     <select class="w-80" name="employment-type" id="employment-type">
+
+                        <option value="0"></option>
                         <option value="1">Fast ansatt (privat)</option>
                         <option value="2">Fast ansatt (offentlig)</option>
                         <option value="3">Midlertidig ansatt/vikar</option>
@@ -87,7 +89,7 @@
                             Ansatt siden
                         </label>
                     </div>
-                    <select class="w-80" tabindex="7" name="employment-since" id="employment-since">
+                    <select class="w-80" tabindex="7" name="employment-since" id="employment-since" disabled>
                         <option value=""></option>
                         <option value="2019">2019</option>
                         <option value="2018">2018</option>
@@ -155,7 +157,7 @@
                     <div class="form-input-box">
                         <label for="employer-name">Arbeidsgiver</label>
                     </div>
-                    <input type="text" class="w-80" id="employer-name" name="employer-name">
+                    <input type="text" class="w-80" id="employer-name" name="employer-name" disabled>
 
                 </div>
                 <div class="combine">
@@ -603,7 +605,7 @@
                 <div class="form-input-box">
                     <label for="spouse-income">Ektefelle/samboers årsinntekt brutto (kr)</label>
                 </div>
-                <input type="text" class="w-80" id="spouse-income" name="spouse-income">
+                <input type="text" class="w-80" id="spouse-income" name="spouse-income" disabled>
             </div>
 
 
@@ -618,19 +620,19 @@
                 <div class="form-input-box">
                     <label for="rent">Husleie per måned (kr)</label>
                 </div>
-                <input type="text" class="w-80" id="rent" name = "rent"> 
+                <input type="text" class="w-80" id="rent" name = "rent" disabled> 
             </div>
             <div class="combine">
                 <div class="form-input-box">
                     <label for="rent-received">Mottar leieinntekter per måned (kr)</label>
                 </div>
-                <input type="text" class="w-80" id="rent-received" name= "rent-received">
+                <input type="text" class="w-80" id="rent-received" name= "rent-received" disabled>
             </div>
             <div class="combine">
                 <div class="form-input-box">
                     <label for="mortgage">Boliggjeld og evt. fellesgjeld (kr)</label>
                 </div>
-                <input type="text" class="w-80" id="mortgage" name="mortgage">
+                <input type="text" class="w-80" id="mortgage" name="mortgage" disabled>
             </div>
 
 
