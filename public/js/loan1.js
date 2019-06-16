@@ -79,6 +79,8 @@ html5Slider.noUiSlider.on('update', function (values, handle) {
 
 $( "#txtLoan" ).change(function() {
     html5Slider.noUiSlider.set([this.value]);
+
+    calculateLoan();
 });
 
 
@@ -169,6 +171,7 @@ function amort(balance, interestRate, terms) {
     }
 
 }
+
 
 
 // ________________________________ checkbox ______________________________________

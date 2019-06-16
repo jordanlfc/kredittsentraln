@@ -66,68 +66,71 @@
     </div>
     <div class="box2">
       <div class="calc-container">
-        <div class="bar-box mt-3 d-flex">
-          <p class="mt-1">Loan Amount</p>
-          <div class="currency-code" style="margin-right:2px"></div>
-          <input type="number" id="txtLoan" class="slider-value" />
-        </div>
-        <div class="bar-box">
-          <div id="amount-range" class=""></div>
-        </div>
-        <div class="row-input hide">
-          <label>Loan interest rate?</label>
-          <div class="input-wrap">
-            <div class="percentage-code">%</div>
-            <input type="text" type="number" id="txtInterest" value="13" maxlength="5" class="short-input" />
+        <form action="/calc" method="POST">
+          <div class="bar-box mt-3 d-flex">
+            <p class="mt-1">Loan Amount</p>
+            <div class="currency-code" style="margin-right:2px"></div>
+            <input type="number" id="txtLoan" class="slider-value" name="amount" />
           </div>
-        </div>
-        <div class="bar-box d-flex">
-          <p class="mt-1">Payback Period</p>
-          <span id="slider-range-value" class="slider-value"></span>
-        </div>
-        <div class="bar-box">
-          <div id="yearRange" class></div>
-        </div>
-        <div id="repayment-cycle" class="payment-box">
-          <div class="heading-title bold">Monthly Cost From:</div>
-          <div id="repayment-cycle-value" class="loan-value">
-            <span id="repayment-value">0</span> Kr<span class="orange-text"></span>
+          <div class="bar-box">
+            <div id="amount-range" class=""></div>
           </div>
-        </div>
-        <div class="switch-box">
-          <p style="float:left">New Loan<p>
-              <p style="float:right">Refinancing<p>
-                  <div class="onoffswitch">
-                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
-                    <label class="onoffswitch-label" for="myonoffswitch">
-                      <span class="onoffswitch-inner"></span>
-                      <span class="onoffswitch-switch"></span>
-                    </label>
-                  </div>
-        </div>
-        <div class="contact-box">
-          <div class="contact-border">
-            <input type="text" name="" id="" placeholder="Phone Number" class="contact-enter"
-              style=" border-top-left-radius: 10px;  border-top-right-radius: 10px">
-            <input type="text" name="" id="" placeholder="Email Address" class="contact-enter"
-              style=" border-bottom-left-radius: 10px;  border-bottom-right-radius: 10px">
+          <div class="row-input hide">
+            <label>Loan interest rate?</label>
+            <div class="input-wrap">
+              <div class="percentage-code">%</div>
+              <input type="text" type="number" id="txtInterest" value="13" maxlength="5" class="short-input"/>
+            </div>
           </div>
-        </div>
-        <div class="coms-box">
-          <input type="checkbox" name="News" value="yes">Jeg samtykker til at Axo Finans AS kan
-          behandle mine/våre personopplysninger som beskrevet her.<br>
-          <input type="checkbox" name="coms" value="yes">Jeg samtykker til at Axo Finans AS kan sende
-          meg nyhetsbrev på e-post/SMS.<br>
-        </div>
+          <div class="bar-box d-flex">
+            <p class="mt-1">Payback Period</p>
+            <span id="slider-range-value" class="slider-value"></span>
+            <input id = "period" value = "" class = "hide" name = "period" />
+          </div>
+          <div class="bar-box">
+            <div id="yearRange" class></div>
+          </div>
+          <div id="repayment-cycle" class="payment-box">
+            <div class="heading-title bold">Monthly Cost From:</div>
+            <div id="repayment-cycle-value" class="loan-value">
+              <span id="repayment-value">0</span> Kr
+              <input id = "repayment" value = "" class = "hide" name = "repayment" />
+            </div>
+          </div>
+          <div class="switch-box">
+            <p style="float:left">New Loan<p>
+                <p style="float:right">Refinancing<p>
+                    <div class="onoffswitch">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+                      <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+          </div>
+          <div class="contact-box">
+            <div class="contact-border">
+              <input type="text" name="phone" id="" placeholder="Phone Number" class="contact-enter"
+                style=" border-top-left-radius: 10px;  border-top-right-radius: 10px">
+              <input type="text" name="email" id="" placeholder="Email Address" class="contact-enter"
+                style=" border-bottom-left-radius: 10px;  border-bottom-right-radius: 10px">
+            </div>
+          </div>
+          <div class="coms-box">
+            <input type="checkbox" name="News" value="news-yes">Jeg samtykker til at kredittsentraln AS kan
+            behandle mine/våre personopplysninger som beskrevet her.<br>
+            <input type="checkbox" name="coms" value="coms-yes">Jeg samtykker til at kredittsentraln AS kan sende
+            meg nyhetsbrev på e-post/SMS.<br>
+          </div>
 
 
 
 
 
-
-        <div class="button-box">
-          <button type="submit" class="btn btn-lg">Search Now</button>
-        </div>
+          <div class="button-box">
+            <button type="submit" class="btn btn-lg">Search Now</button>
+          </div>
+        </form>
 
 
 
@@ -149,15 +152,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="/js/loan1.js"></script>
+  <script type="text/javascript" src="/js/loan2.js"></script>
 
-  <!-- <script>
-
-    var divs = document.querySelectorAll('.noUi-pips-horizontal'), i;
-
-    for (i = 0; i < divs.length; ++i) {
-      divs[i].style.display = "none";
-    }
-  </script> -->
 </body>
 
 </html>
