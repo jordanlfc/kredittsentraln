@@ -103,10 +103,10 @@ app.get('/api',(req,res) =>{
 
 const port = process.env.PORT || 5000;
 
-// app.listen(port, console.log(`server started on port ${port}`))
+app.listen(port, console.log(`server started on port ${port}`))
 
-app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("Server Started");
-});
+// app.listen(process.env.PORT, process.env.IP, function(){
+//    console.log("Server Started");
+// });
 
 
