@@ -88,6 +88,7 @@ app.post('/apply',
 
    var a = req.body
    res.render('success', {details:a})
+   console.log(a)
 
 });
 
