@@ -164,9 +164,9 @@
     border-radius: 10px;
 }
 
-.right-links{
+/* .right-links{
     margin-left:45.7em;
-}
+} */
 
 .slider-box{
     width: 100%;
@@ -212,5 +212,21 @@
 
 .w-80 {
     width: 80% !important;   
+}
+
+
+.margin-left-48{
+    margin-left: 48em;
+}
+.margin-left-auto{
+    margin-left: auto;
+}
+
+.mt-10{
+    margin-top:10em
+}
+
+.height-10{
+    height:10em;
 }
 
