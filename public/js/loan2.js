@@ -33,11 +33,13 @@ $(document).ready(function () {
         if($(window).width()<=779){
             $('body').css('display', 'grid')
             $('#navbar').addClass('height-10')
+            $('#calcbox').addClass('mt-5')
         }
         if($(window).width()>779){
             $('body').css('display', 'block')
             $('#navbar').removeClass('height-10')
             $('#page-section').addClass('mt-3').removeClass('mt-10')
+            $('#calcbox').removeClass('mt-5')
         }
     })
 
