@@ -244,3 +244,8 @@
     height:10em;
 }
 
+@media(max-width:500px){
+    .number{
+        display:none;
+    }
+}
