@@ -50,6 +50,7 @@
 }
 
 .calc-container {
+    min-height: 38em;
     text-align:left;
     max-width: 450px;
     min-width: 400px;
@@ -94,6 +95,10 @@
     padding: .5em;
 }
 
+.error {
+    color:red;
+}
+
 .form-input-box {
     display:grid;
 }
@@ -132,9 +137,6 @@
     margin-left:3em;
 }
 
-.main-section{
-    height: 100%;
-}
 
 .mr-6 {
     margin-right: 6em
@@ -145,6 +147,13 @@
     background-color :#D7EAF1;
 }
 
+@media(max-width:991px) {
+    #navbarNavAltMarkup{
+        background-color: #D7EAF1;
+        z-index: 10;
+    }
+}
+
 .no-select {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -153,6 +162,10 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+#page-section{
+    height:auto;
 }
 
 .payment-box {
@@ -195,6 +208,7 @@
     font-weight: bold;
 
 }
+
 
 .white-bar{
     background-color: white;
