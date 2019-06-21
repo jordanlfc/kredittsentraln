@@ -44,7 +44,7 @@
     <section class="form-section mt-5">
         <form id="loan-form" target="/apply" method="POST">
             <div class="row">
-                <div class="form-section-box col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="form-section-box col-12 col-md-6 col-lg-4">
                     <p class="form-title">
                         Informasjon om deg
                     </p>
@@ -500,7 +500,7 @@
                     </div>
 
                 </div>
-                <div class="form-section-box col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="form-section-box col-12 col-md-6 col-lg-4">
                     <p class="form-title">
                         Informasjon om husholdningen
                     </p>
@@ -678,7 +678,7 @@
                 </div>
 
 
-                <div id="co-hab" class="form-section-box col-12 col-md-6 col-lg-4 col-xl-3 hide">
+                <div id="co-hab" class="form-section-box col-12 col-md-6 col-lg-4 hide">
                     <p class="form-title">
                         Informasjon om medsøker
                     </p>
@@ -1118,7 +1118,7 @@
                 </div>
 
 
-                <div class="form-section-box col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="form-section-box col-12 col-md-6 col-lg-4">
                     <p class="form-title">
                         Annen Informasjon
                     </p>
@@ -1194,6 +1194,10 @@
 
     <script>
     
+    $('#co-applicant').click(function () {
+        $('.form-section-box').toggleClass('col-lg-3')
+        $('.form-section-box').toggleClass('col-lg-4')
+    })
     
     
     $( '.extras' ).each(function() {
