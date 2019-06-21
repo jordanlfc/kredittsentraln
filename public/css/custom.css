@@ -2,6 +2,10 @@
     outline: none;
 }
 
+body{
+    min-height: 50em;
+}
+
 .bar-box{
 
     height:2em;
@@ -220,10 +224,6 @@
     font-weight: bold;
 }
 
-.whole-page{
-    height: 40em;
-}
-
 .w-80 {
     width: 80% !important;   
 }
@@ -248,4 +248,8 @@
     .number{
         display:none;
     }
+}
+
+.noUi-connect {
+    background-color: #B6E2CA
 }
